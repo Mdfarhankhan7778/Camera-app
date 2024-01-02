@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.video-cont{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+video{
+    height: 100%;
+    width: 100%;
+}
+.action-cont{
+    height: 12rem;
+    width: 5rem;
+    position: absolute;
+    top: calc((100vh - 12rem)/2);
+    left: calc((100vw - 10rem));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+
+}
+.action-cont > * {
+    height: 5rem;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.record-btn{
+    background-color: red;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+} 
+.capture-btn{
+    background-color: white;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+} 
+.scale-record{
+    animation-name: scale-capture;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+.scale-capture{
+    animation-name: scale-capture;
+    animation-duration: 1s;
+}
+@keyframes scale-record{
+    0%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes scale-capture{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+.timer-cont{
+    position: absolute;
+    bottom: 4rem;
+    left: 3rem;
+    color: rgb(138, 9, 9);
+    z-index: 2;
+}
+.timer{
+    display: none;
+    font-size: 1.2em;
+}
